@@ -1,0 +1,5 @@
+{
+  "name": "CBIT AI Assistant",
+  "description": "A chatbot application that provides information about Chaitanya Bharathi Institute of Technology (CBIT) based on a pre-loaded knowledge base, using Gemini API for responses.",
+  "requestFramePermissions": []
+}
