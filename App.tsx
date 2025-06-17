@@ -1,12 +1,12 @@
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Header } from './components/Header';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ChatInput } from './components/ChatInput';
 import { ChatMessageDisplay } from './components/ChatMessageDisplay';
+import { Header } from './components/Header';
 import { LoadingSpinner } from './components/LoadingSpinner';
-import { Message, UserType, AIResponse } from './types';
-import { askAI } from './services/geminiService';
 import { SIMULATED_KNOWLEDGE_BASE } from './constants';
+import { askAI } from './services/geminiService';
+import { AIResponse, Message, UserType } from './types';
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -97,7 +97,7 @@ const App: React.FC = () => {
         isLoading={isLoading}
       />
       <footer className="p-2 text-center text-xs text-gray-500 bg-gray-100 border-t">
-        CBIT AI Assistant. Powered by Gemini. For informational purposes only. Knowledge limited to provided documents.
+        CBIT AI Assistant. For informational purposes only. Knowledge limited to provided documents.
       </footer>
     </div>
   );
